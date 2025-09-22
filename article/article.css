@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    font-family: "Roboto Mono", monospace;
+}
+
+article {
+    width: 610px;
+}
+
+article h1,
+article h4 {
+    text-align: center;
+}
+
+article h1{
+    font-size: 28px;
+}
+article h4{
+    font-size: small;
+    font-weight: normal;
+    font-style: italic;
+    color: darkgray;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+article > p{
+    column-count: 2;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+article > p::first-letter{
+    float: left;
+    line-height: 1;
+    padding-right: 4px;
+    font-size: 400%;
+    color: chocolate;
+    font-weight: 600;
+}
+
+article > p > span:first-child{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 52px;
+}
+
+.divider {
+    display: block;
+    border-left: 0.1px solid rgba(128, 128, 128, 0.373);
+    padding-left: 16px;
+}
+
+.divider span:not(:first-child) {
+    display: block;
+    margin-top: 20px;
+}
