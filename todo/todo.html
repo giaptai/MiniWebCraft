@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Iat" />
+    <link rel="stylesheet" href="todo.css" />
+    <title>ToDo</title>
+  </head>
+  <body>
+    <div id="kanban">
+      <div class="kanban-col todo">
+        <div class="kanban-head">
+          <h3>To do</h3>
+          <!-- <button>Add</button> -->
+        </div>
+        <div class="kanban-list" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+          <div class="kanban-item" draggable="true" ondragstart="dragstartHandler(event)">
+            <h6>Viết tài liệu API</h6>
+            <p>Hoàn thành phần hướng dẫn cho dev mới.</p>
+          </div>
+          <div class="kanban-item" draggable="true" ondragstart="dragstartHandler(event)">
+            <h6>Thiết kế banner</h6>
+            <p>Banner cho sự kiện Black Friday.</p>
+          </div>
+          <div class="kanban-item" draggable="true" ondragstart="dragstartHandler(event)">
+            <h6>Viết tài liệu API</h6>
+            <p>Hoàn thành phần hướng dẫn cho dev mới.</p>
+          </div>
+          <div class="kanban-item" draggable="true" ondragstart="dragstartHandler(event)">
+            <h6>Thiết kế banner</h6>
+            <p>Banner cho sự kiện Black Friday.</p>
+          </div>
+          <div class="kanban-item" draggable="true" ondragstart="dragstartHandler(event)">
+            <h6>Viết tài liệu API</h6>
+            <p>Hoàn thành phần hướng dẫn cho dev mới.</p>
+          </div>
+        </div>
+      </div>
+      <div class="kanban-col inprogress">
+        <div class="kanban-head">
+          <h3>In Progress</h3>
+          <!-- <button>Add</button> -->
+        </div>
+        <div class="kanban-list" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+          <div class="kanban-item" draggable="true" ondragstart="dragstartHandler(event)">
+            <h6>Code review</h6>
+            <p>Kiểm tra pull request #42.</p>
+          </div>
+        </div>
+      </div>
+      <div class="kanban-col done">
+        <div class="kanban-head">
+          <h3>Done</h3>
+          <!-- <button>Add</button> -->
+        </div>
+        <div class="kanban-list" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+          <div class="kanban-item" draggable="true" ondragstart="dragstartHandler(event)">
+            <h6>Test mobile app</h6>
+            <p>Chạy thử trên iOS và Android.</p>
+          </div>
+
+          <div class="kanban-item" draggable="true" ondragstart="dragstartHandler(event)">
+            <h6>Họp sprint</h6>
+            <p>Chuẩn bị agenda cho buổi họp sáng mai.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="todo.js">
+
+    </script>
+  </body>
+</html>

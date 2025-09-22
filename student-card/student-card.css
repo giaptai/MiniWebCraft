@@ -1,0 +1,86 @@
+:root{
+    --bg-color: #498fe1;
+    --tx-white: white;
+    --tx-gray: #595c73;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#student-card{
+    width: 260px;
+    height: fit-content;
+    border: 2px solid var(--bg-color);
+    border-radius: 17px;
+    box-shadow: 0px 10px 25px gray;
+    box-sizing: border-box;
+    transition: margin-top 0.3s ease-out;
+}
+
+
+.student-card-header {
+    background-color: var(--bg-color);
+    padding: 16px 16px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    font-size: larger;
+    color: var(--tx-white);
+}
+
+.student-card-body{
+    text-align: center;
+}
+
+.student-img{
+    width: 110px;
+    height: 110px;
+    margin: 24px auto 16px;
+    border: 3px solid var(--bg-color);
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.student-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+.student-name{
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: medium;
+    color: darkblue
+}
+
+.student-info{
+    font-size: smaller;
+    padding-bottom: 32px;
+    color: var(--tx-gray);
+}
+
+.student-info p{
+    margin-bottom: 4px;
+}
+
+.student-info p:first-child{
+    margin-bottom: 8px;
+}
+
+#student-card:hover{
+    margin-top: -27px;
+}

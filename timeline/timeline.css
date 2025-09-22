@@ -1,0 +1,77 @@
+:root {
+  --color-purple: blueviolet;
+  --bg-pur: darkmagenta;
+}
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+#timeline {
+  padding-top: 4px;
+  width: clamp(315px, 100%, 500px);
+  border-left: 3px solid var(--color-purple);
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.event {
+  min-width: 300px;
+  position: relative;
+  margin-bottom: 20px;
+    cursor:pointer;
+}
+
+.event > .dot {
+  width: 11px;
+  height: 11px;
+  border: 2.7px solid white;
+  box-shadow: 0px 0px 4px var(--bg-pur);
+  border-radius: 50%;
+  background-color: var(--color-purple);
+  position: absolute;
+  top: 5.5px;
+  left: -8.5px;
+  transition: border 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.event > .entry {
+  margin-left: 16px;
+}
+
+.entry > span {
+  font-weight: 600;
+  font-size: smaller;
+  color: var(--color-purple);
+}
+
+.entry h4 {
+  margin-bottom: 4px;
+  transition: color 0.3s ease-out;
+}
+
+.entry p {
+  font-size: smaller;
+  color: darkslategrey;
+  transition: color 0.3s ease-out;
+}
+
+.event:hover > .dot {
+  border: 2.7px solid var(--color-purple);
+  box-shadow: none;
+}
+
+.event:hover > .entry > h4, .event:hover > .entry > p{
+  color: var(--color-purple);
+}
+

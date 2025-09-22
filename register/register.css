@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  height: 100vh;
+
+  font-family: "Oswald", sans-serif;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0f0f0f;
+}
+
+#register-form {
+  width: 250px;
+  border: 1px solid black;
+  padding: 20px 24px;
+  border-radius: 8px;
+  background-color: #333333;
+  position: relative;
+}
+
+#register-form::after {
+  content: "";
+  top: -6px;
+  left: -6px;
+  border-radius: 8px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  position: absolute;
+  background: radial-gradient(
+    circle at center,
+    #e12424,
+    #cfdf1b,
+    #11e268,
+    #e12424
+  );
+  z-index: -1;
+  background-size: 400% 400%;
+  animation: border-animate 4s infinite ease-in-out;
+}
+
+@keyframes border-animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#register-form h4 {
+  display: block;
+  margin-bottom: 24px;
+  padding: 12px;
+  border: 1px solid 0f0f0f;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #0f0f0f;
+  color: white;
+  font-size: larger;
+}
+
+.inp-form {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.inp-form input {
+  display: block;
+  outline: none;
+  height: 32px;
+  padding: 4px 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  border: #0f0f0f;
+}
+
+label {
+  position: absolute;
+  top: 2.36px; /* (dài input - dài label)/2 */
+  left: 8px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  padding: 4px;
+  font-size: smaller;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -11.445px; /* dài label / 2 */
+  font-size: 0.7em;
+  background-color: white;
+  border-radius: 4px 4px 0px 0px;
+}
+
+#register-form button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #0f0f0f;
+  color: white;
+  border-radius: 4px;
+  outline: white;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  z-index: 2;
+  background-color: #0f0f0f;
+}

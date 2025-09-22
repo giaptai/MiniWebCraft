@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My HTML/CSS Projects</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7f6;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Align items to the start to allow scrolling */
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #007bff;
+      font-size: 1.4em;
+    }
+
+    .project-card p {
+      font-size: 0.9em;
+      color: #666;
+      line-height: 1.5;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>My HTML/CSS Projects</h1>
+      <div class="project-grid">
+        <a href="todo/todo.html" class="project-card">
+          <h3>Todo List</h3>
+          <p>A simple drag-and-drop todo application.</p>
+        </a>
+        <a href="timeline/timeline.html" class="project-card">
+          <h3>Timeline</h3>
+          <p>A responsive vertical timeline component.</p>
+        </a>
+        <a href="student-card/student-card.html" class="project-card">
+          <h3>Student Card</h3>
+          <p>A stylish student profile card with hover effect.</p>
+        </a>
+        <a href="register/register.html" class="project-card">
+          <h3>Register Form</h3>
+          <p>A registration form with animated labels.</p>
+        </a>
+        <a href="poetry/poetry.html" class="project-card">
+          <h3>Poetry Page</h3>
+          <p>A simple page displaying a poem with custom fonts.</p>
+        </a>
+        <a href="newsletter/newsletter.html" class="project-card">
+          <h3>Newsletter Signup</h3>
+          <p>A newsletter subscription form with custom styling.</p>
+        </a>
+        <a href="recipe/recipe.html" class="project-card">
+          <h3>Recipe Card</h3>
+          <p>A card displaying a recipe with ingredients and instructions.</p>
+        </a>
+        <a href="blog-post-card/blog-post-card.html" class="project-card">
+          <h3>Blog Post Card</h3>
+          <p>A card for a blog post with an image and description.</p>
+        </a>
+        <a href="credit-card/credit-card.html" class="project-card">
+          <h3>Credit Card UI</h3>
+          <p>A visual representation of a credit card.</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

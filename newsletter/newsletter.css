@@ -1,0 +1,81 @@
+:root {
+    --color-g: #00cd09;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: Arial, "sans-serif";
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #000000;
+}
+
+#newsletter {
+    width: clamp(200px, 100%, 370px);
+    height: fit-content;
+    padding: 20px;
+    border: 2px solid var(--color-g);
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #111111;
+}
+
+#newsletter>h4 {
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: var(--color-g);
+    letter-spacing: 1px;
+}
+
+#newsletter input[type="email"],
+#newsletter>button {
+    display: block;
+    width: 100%;
+    height: 32px;
+    border: 2px solid var(--color-g);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    color: var(--color-g);
+    padding-left: 4px;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+#newsletter input[type="email"]:focus {
+    border: 2px solid var(--color-g);
+    outline: none;
+}
+
+#newsletter input[type="email"]:focus::placeholder {
+    color: transparent;
+}
+
+#newsletter input[type="email"]::placeholder {
+    color: var(--color-g);
+    font-size: smaller;
+}
+
+#newsletter>button {
+    font-size: smaller;
+    font-weight: 600;
+    color: #000000;
+    background-color: var(--color-g);
+}
+
+#newsletter > span {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-size: 11.5px;
+    color: var(--color-g);
+}
