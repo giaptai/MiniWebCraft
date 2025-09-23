@@ -14,7 +14,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 12px;
 }
 
 #blog-post-card{
@@ -46,10 +46,11 @@ body{
     width: calc(100%);
     height: calc(100%);
     border-radius: 13px 13px 0px 0px;
-    transition: background-color 0.2s ease-in, backdrop-filter 0.2s ease-in;
+    transition: background-color 0.25s ease-in, backdrop-filter 0.25s ease-in;
 }
 
-.img-wrapper:hover::after{
+#blog-post-card:hover .img-wrapper::after
+{
     content: "See more";
     border-radius: 13px 13px 0px 0px;
     backdrop-filter: blur(7px);
@@ -64,13 +65,9 @@ body{
     transition: box-shadow 0.3s ease-in;
 }
 
-.desc:hover{
+#blog-post-card:hover .desc{
     box-shadow: 0px 9px 17px darkgray;
 }
-
-
-
-
 
 .desc p{
     font-size: 12.5px;

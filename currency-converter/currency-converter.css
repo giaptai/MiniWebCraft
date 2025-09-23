@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #011051;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px;
+}
+
+#currency-converter {
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    display: grid;
+    box-shadow: 0px 0px 4px white;
+}
+
+#currency-converter>h4,
+#currency-converter>p {
+    text-align: center;
+}
+
+#currency-converter>h4 {
+    font-size: large;
+    margin-bottom: 4px;
+}
+
+#currency-converter>p {
+    font-size: small;
+    color: grey;
+    margin-bottom: 16px;
+}
+
+#currency-converter>p span {
+    color: #007bfe;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#currency-converter>.convert-type,
+#currency-converter>.convert-num {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 12px;
+}
+
+#currency-converter>.convert-type label,
+#currency-converter>.convert-num label {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+#currency-converter>.convert-type .inp-group,
+#currency-converter>.convert-num .inp-group {
+    flex-basis: 100%;
+    margin-bottom: 12px;
+}
+
+#currency-converter>.convert-type .inp-group {
+    margin-bottom: 16px;
+}
+
+#currency-converter>.convert-type select,
+#currency-converter>.convert-num input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 4px;
+    border-radius: 4px;
+    outline: none;
+    border: 1.5px solid rgba(128, 128, 128, 0.454);
+    height: 30px;
+    background-color: #f1f1f1;
+}
+
+#currency-converter>.convert-num .inp-group:last-child input{
+    cursor: not-allowed;
+}
+
+#currency-converter button {
+    margin-top: 8px;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bfe;
+    color: white;
+    font-weight: 600;
+    font-size: smaller;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    #currency-converter {
+        width: 100%;
+        max-width: 300px;
+        min-width: 200px;
+    }
+
+    #currency-converter>.convert-type,
+    #currency-converter>.convert-num {
+        flex-direction: column;
+    }
+}

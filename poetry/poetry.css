@@ -17,6 +17,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color);
+  padding:12px;
+}
+
+#poetry{
+  width: 320px;
 }
 
 #poetry h1,

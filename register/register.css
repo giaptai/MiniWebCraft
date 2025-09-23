@@ -15,10 +15,12 @@ body {
   align-items: center;
 
   background-color: #0f0f0f;
+  padding: 12px;
 }
 
 #register-form {
   width: 250px;
+  max-width: 250px;
   border: 1px solid black;
   padding: 20px 24px;
   border-radius: 8px;

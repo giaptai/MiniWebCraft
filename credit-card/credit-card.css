@@ -12,6 +12,7 @@ body{
     height: 100vh;
     font-family: "Roboto Mono", monospace;
     background-color: #1e1e2e;
+    padding:12px;
 }
 
 #credit-card{
