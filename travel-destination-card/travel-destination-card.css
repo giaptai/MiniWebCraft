@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  height: 100vh;
+  padding: 12px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0e0e;
+}
+
+#travel-destination {
+  width: 100%;
+  max-width: 830px;
+}
+
+#travel-destination h3 {
+  text-align: center;
+  padding: 8px 4px;
+  margin-bottom: 16px;
+}
+
+#neon-title span {
+  display: inline-block;
+  color: #fff;
+  text-shadow: 0 0 2px #fff, 0 0 4px #ff0, 0 0 6px #ff0, 0 0 8px #ff0;
+  font-weight: bold;
+  font-size: 28px;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.travel.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.travel.list::after {
+  content: "";
+  flex: 1;
+  min-width: 230px;
+  visibility: hidden;
+}
+
+.travel.card {
+  border-radius: 12px;
+  flex: 1;
+  min-width: 230px;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.travel.card:hover {
+  transform: translateY(-8px);
+}
+
+.travel.card:first-child {
+  background-image: url(paris.avif);
+  box-shadow: 0px 0px 8px rgba(105, 85, 6, 0.541),
+    0px 0px 18px rgba(105, 85, 6, 0.352), 0px 0px 28px rgba(105, 85, 6, 0.352),
+    0px 0px 38px rgba(105, 85, 6, 0.352);
+}
+
+.travel.card:nth-child(2) {
+  background-image: url(danang.jpg);
+  box-shadow: 0px 12px 28px rgba(128, 0, 128, 0.78);
+}
+
+.travel.card:last-child {
+  background-image: url(newyork.jpg);
+  box-shadow: 0px 12px 28px rgba(25, 87, 164, 0.49);
+}
+
+.content-card {
+  padding: 12px 12px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.content-card h5 {
+  color: white;
+  margin-bottom: 8px;
+  font-size: medium;
+}
+
+.travel.card:first-child .content-card button {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 8px;
+  color: white;
+  background: rgba(105, 85, 6, 0.641);
+  border: none;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+
+}
+
+.travel.card:first-child:hover button {
+  box-shadow: 0px 12px 24px rgba(105, 85, 6, 0.541);
+}
+
+.travel.card:nth-child(2) .content-card button {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 8px;
+  color: white;
+  background: rgba(72, 14, 144, 0.641);
+  border: none;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+
+}
+
+.travel.card:nth-child(2):hover button {
+  box-shadow: 0px 12px 24px rgba(72, 14, 144, 0.641);
+}
+
+.travel.card:last-child .content-card button {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 8px;
+  color: white;
+  background: rgba(25, 87, 164, 0.641);
+  border: none;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+
+}
+
+.travel.card:last-child:hover button {
+  box-shadow: 0px 12px 24px rgba(25, 87, 164, 0.641);
+}
