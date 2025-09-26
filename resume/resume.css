@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body {
+    padding: 12px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    font-family: Roboto, "sans-serif";
+}
+
+#resume {
+    background: white;
+    width: clamp(250px, 80vw, 700px);
+    padding: 28px;
+    /* height: calc(100vh - 12px - 12px - 28px - 28px); */
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+}
+
+#resume .summary {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#resume .summary img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+#resume .summary .summary-right h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: xx-large;
+    font-weight: 700;
+    border-right: .15em solid orange; 
+    /* CSS typing animation */
+    animation: typing 1.6s steps(9, end) infinite alternate, blink .5s step-end infinite alternate;
+    /* animation: typing 3s linear infinite alternate, blink .5s step-end infinite alternate; */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+#resume .desc {
+    margin-top: 8px;
+    line-height: 24px;
+}
+
+#resume .experience.box {
+    margin-top: 16px;
+}
+
+#resume .summary .summary-right span:not(.title) {
+    display: block;
+    font-size: 1px;
+    margin: 8px 0px;
+}
+
+#resume .summary .summary-right .title {
+    display: block;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#resume .underline {
+    margin-bottom: 20px;
+}
+
+#resume .underline h5 {
+    font-size: large;
+    color: #e57373;
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+
+#resume .timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+#resume .timeline span {
+    color: grey;
+    font-size: smaller;
+}
+
+#resume ul {
+    padding-left: 20px;
+}
+
+#resume li {
+    margin-bottom: 8px;
+}
+
+.tags.box {
+    display: flex;
+    column-gap: 12px;
+}
+
+#resume .tag {
+    margin-top: 12px;
+    padding: 8px;
+    background-color: rgba(229, 115, 115, 0.2);
+    border-radius: 4px;
+    color: #e57373;
+    /* font-size: 11px; */
+}
