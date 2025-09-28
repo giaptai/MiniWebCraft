@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: content-box;
+}
+
+body{
+    padding: 12px;
+}
+
+#pricing-card{
+    width: clamp(300px, 90vw, 670px);
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body {
+    padding: 12px;
+    background-color: #f9f9f9;
+    font-family: "Lato", sans-serif;
+}
+
+#fqa {
+    width: clamp(250px, 90vw, 600px);
+    margin: 0 auto;
+}
+
+#fqa h3 {
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: x-large;
+}
+
+#fqa>.accordion {
+    background: rgba(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 0px 7px rgba(162, 161, 161, 0.709);
+    padding: 12px 16px;
+    margin-bottom: 12px;
+}
+
+#fqa .accordion.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fqa .accordion.head h5{
+    font-size: 14px;
+}
+
+#fqa .accordion.head button {
+    background: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    font-size: larger;
+    cursor: pointer;
+}
+
+#fqa>.accordion>p {
+    font-size: 13px;
+    line-height: 20px;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: max-height 0.3s ease-in-out, margin-top .3s ease-in-out;
+}
+
+#fqa>.accordion>p.open {
+    margin-top: 16px;
+}
