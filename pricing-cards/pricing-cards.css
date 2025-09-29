@@ -1,13 +1,95 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
     padding: 0;
-    margin:0;
+    margin: 0;
     box-sizing: content-box;
 }
 
-body{
+body {
     padding: 12px;
+    background: #111111;
+    font-family:"Oswald", sans-serif;
 }
 
-#pricing-card{
-    width: clamp(300px, 90vw, 670px);
+#pricing-card {
+    max-width: 852px;
+    margin: 0 auto;
+}
+
+#pricing-card>h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#pricing-card>p {
+    color: gray;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#pricing-card .plans {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+#pricing-card .plans .card {
+    color: white;
+    background: #2a2a3e;
+    padding: 20px 12px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#pricing-card .plans .card:nth-child(2){
+    border: 2px solid #1494f9;
+    min-height: 277px;
+}
+
+#pricing-card .plans .card h5 {
+    font-size: medium;
+}
+
+#pricing-card .plans .card>p {
+    margin-top: 20px;
+    margin-bottom: 28px;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+#pricing-card .plans .card>p>span {
+    font-size: medium;
+    color: gray;
+    font-weight: 600;
+}
+
+#pricing-card .plans .card .content>p {
+    margin-bottom: 12px;
+    color: rgba(245, 245, 245, 0.607);
+    font-size: small;
+}
+
+#pricing-card .plans .card>button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 8px;
+    border-radius: 4px;
+    color: white;
+    background-color: #1494f9;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    font-size: medium;
+    cursor:pointer;
+    font-family:"Oswald", sans-serif;
+}
+
+@media (max-width: 480px) {
+    #pricing-card .plans {
+        grid-template-columns: repeat(1, 100%);
+    }
 }
