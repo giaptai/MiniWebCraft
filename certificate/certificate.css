@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+#certificate {
+    width: 680px;
+    border: 8px solid black;
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+#certificate  .inner{
+    border: 3px dashed rgb(60, 60, 226);
+    padding: 24px 44px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#certificate  .inner h3{
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+#certificate  .inner p:nth-child(2){
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#certificate  .inner h4:nth-child(3){
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+#certificate  .inner p:nth-child(4){
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+#certificate  .inner h4:nth-child(5){
+    font-size: 20px;
+    color: rgb(24, 24, 116);
+    margin-bottom: 16px;
+}
+
+
+#certificate  .inner p:nth-child(6){
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 60px;
+}
+
+#certificate .sign{
+    position: absolute;
+    bottom: 8px;
+    right: 44px;
+}
+
+#certificate .sign p{
+    font-size: 13px;
+}

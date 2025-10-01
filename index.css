@@ -63,3 +63,8 @@
       color: #666;
       line-height: 1.5;
     }
+
+    .mark{
+      border: 3px solid #9b59b6;
+      box-sizing: border-box;
+    }

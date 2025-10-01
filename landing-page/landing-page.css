@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+#landing-page {
+    width: 100%;
+}
+
+#landing-page header {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+#landing-page .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 40px;
+    max-width: 1100px;
+    position: relative;
+}
+
+#landing-page .navbar .logo {
+    font-size: 29px;
+    font-weight: bold;
+}
+
+#landing-page .navbar .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#landing-page .navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+#landing-page header .hero-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#landing-page header .hero-content p {
+    font-size: 19px;
+    margin-bottom: 32px;
+}
+
+#landing-page .button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 24px;
+    border-radius: 4px;
+    color: #764ba2;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: background-color 0.25s ease;
+}
+
+#landing-page header .hero-content .button:hover {
+    background-color: white;
+}
+
+#landing-page section.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    row-gap: 20px;
+    background-color: #f9f9f9;
+}
+
+#landing-page section.features .feature {
+    flex: 1 1 250px;
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#landing-page section.features .feature h3 {
+    color: #764ba2;
+    margin-bottom: 12px;
+}
+
+#landing-page section.testimonials {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+#landing-page section.testimonials .testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+#landing-page section.testimonials .testimonial-container .testimonial {
+    max-width: 300px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    font-style: italic;
+    box-sizing: border-box;
+}
+
+/* FQA */
+#landing-page section.fqa {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#landing-page section.fqa h2 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+#landing-page section.fqa .fqa-item {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+/* CTA */
+#landing-page section.cta {
+    background: linear-gradient(to right, #764ba2, #667eea);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#landing-page section.cta .button {
+    background-color: white;
+    color: #764ba2;
+    margin-top: 20px;
+}
+
+/* NEWSLETTER */
+#landing-page section.newsletter {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+#landing-page section.newsletter form {
+    margin-top: 20px;
+}
+
+#landing-page section.newsletter input[type="email"] {
+    padding: 12px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#landing-page section.newsletter button {
+    padding: 12px 20px;
+    margin-left: 12px;
+    border: none;
+    background-color: #764ba2;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#landing-page section.newsletter button:hover {
+    background-color: #5a3c91;
+}
+
+#landing-page section.newsletter input[type="email"]:focus {
+    border: 1px solid #764ba2;
+    outline: none;
+}
+
+/* TEAM */
+#landing-page section.team {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#landing-page section.team .team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0, 1);
+}
+
+#landing-page section.team .team-members {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+#landing-page section.team .team-members .member {
+    flex-basis: 150px;
+    max-width: 200px;
+}
+
+#landing-page footer.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#landing-page .navbar .btn-ham {
+    display: none;
+    width: 39px;
+    height: 39px;
+    background: none;
+    color: white;
+    box-sizing: border-box;
+    border: none;
+    font-size: x-large;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 810px) {
+    #landing-page{
+        overflow-x: hidden;
+    }
+    #landing-page section.features::after {
+        content: "";
+        flex: 1 1 250px;
+        max-width: 300px;
+        margin: 20px;
+        visibility: hidden;
+    }
+
+    #landing-page section.testimonials .testimonial-container::after {
+        content: "";
+        flex: 1 1 250px;
+        max-width: 300px;
+        visibility: hidden;
+        box-sizing: border-box;
+    }
+
+    #landing-page section.team .team-members::after {
+        content: "";
+        width: 150px;
+        max-width: 200px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    #landing-page .navbar .btn-ham {
+        display: block;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    #landing-page .navbar .nav-links {
+        position: absolute;
+        right: -50%;
+        top: calc(39px + 12px);
+        flex-direction: column;
+        visibility: hidden;
+        width: 170px;
+        padding: 20px 12px;
+        border-radius: 4px;
+        background-color: rgba(90, 60, 145, 0.7);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        opacity: 0;
+        transition: right 0.4s ease-out, opacity 0.7s ease-out,
+            visibility 0.7s ease-out;
+    }
+
+    #landing-page .navbar .btn-ham.rotate {
+        transform: rotate(0deg);
+    }
+
+    /* transition */
+    #landing-page .navbar .nav-links.rotate {
+        right: 0px;
+        visibility: visible;
+        opacity: 1;
+    }
+}
