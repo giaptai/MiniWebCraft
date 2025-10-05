@@ -1,0 +1,138 @@
+:root {
+  --bg-color: #faf8f4;
+  --tx-color: #5e4942;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Bitcount Prop Double Ink", Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+#keyboard {
+  border: 16px solid #EBE5DC;
+  border-radius: 32px;
+  width: 980px;
+  height: 1005;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+#keyboard > h2{
+  text-align: center;
+  margin: 12px 0px;
+  color: #BFB8A6;
+  text-shadow: 1px 1px 3px #EBE5DC;
+}
+
+#keyboard .keys {
+  border: 1px solid #E7E2D9;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 20px 24px;
+  background-color: rgba(69, 61, 50, 0.02);
+}
+
+#keyboard .row {
+  display: flex;
+  column-gap: 12px;
+  margin-bottom: 12px;
+}
+
+
+#keyboard .fun-key button,
+#keyboard .num button,
+#keyboard .top-letter button,
+#keyboard .middle-letter button,
+#keyboard .bottom-letter button,
+#keyboard .last-letter button {
+  font-family: "Bitcount Prop Double Ink", Arial, sans-serif;
+  flex: 1 1 48px;
+  height: 48px;
+  padding: 4px;
+  border: none;
+  background-color: #FAF7F2;
+  border-radius: 8px;
+  box-shadow:
+    inset 0px 4px 3px white,
+    inset 0px -6px 2px rgba(128, 128, 128, 0.5),
+    0px 4px 3px rgb(128, 128, 128, 1),
+    4px 0px 2px rgb(128, 128, 128, 0.25),
+    -4px 0px 2px rgb(128, 128, 128, 0.25);
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+}
+
+#keyboard .num button.col{
+  display: grid;
+}
+
+#keyboard .num button:nth-child(14) {
+  flex: 2 2 96px;
+}
+
+#keyboard .top-letter button:nth-child(1) {
+  flex: 1 1 72px;
+}
+
+#keyboard .top-letter button:nth-child(14) {
+  flex: 2 2 72px;
+}
+
+#keyboard .middle-letter button:nth-child(1) {
+  flex: 1 1 86.4px;
+}
+
+#keyboard .bottom-letter button:nth-child(1) {
+  flex: 1 1 108px;
+}
+
+#keyboard .bottom-letter button:nth-child(12) {
+  flex: 1 1 86.4px;
+}
+
+#keyboard .bottom-letter button:last-child {
+  background-color: #EBE5DC;
+  box-shadow: none;
+  /* visibility: hidden; */
+}
+
+#keyboard .last-letter button:nth-child(4) {
+  flex: 7 7 408px;
+}
+
+#keyboard .fun-key button:active,
+#keyboard .num button:active,
+#keyboard .top-letter button:active,
+#keyboard .middle-letter button:active,
+#keyboard .bottom-letter button:active,
+#keyboard .last-letter button:active,
+/*  */
+#keyboard .fun-key button.pressed,
+#keyboard .num button.pressed,
+#keyboard .top-letter button.pressed,
+#keyboard .middle-letter button.pressed,
+#keyboard .bottom-letter button.pressed,
+#keyboard .last-letter button.pressed
+
+{
+  transform: translateY(4px);
+  box-shadow:
+    inset 0px 0px 0px transparent,
+    inset 0px -2px 2px rgba(128, 128, 128, 0.5),
+    0px 2px 1px rgb(128, 128, 128, 1),
+    4px 0px 1px rgb(128, 128, 128, 0.25),
+    -4px 0px 1px rgb(128, 128, 128, 0.25);
+}
