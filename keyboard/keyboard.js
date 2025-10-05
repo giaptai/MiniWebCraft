@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Lấy event.code của phím được nhấn và chuyển sang chữ thường
         const targetCode = e.code.toLowerCase();
+        console.log(e.code);
         // Tìm tất cả các nút trên bàn phím ảo có data-key tương ứng
         const btnToPress = keyboard.querySelectorAll(`button[data-key="${targetCode}"]`);
-
         btnToPress.forEach(btn => {
             if (!btn.classList.contains("pressed")) {
                 btn.classList.add('pressed')

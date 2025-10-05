@@ -24,8 +24,7 @@ body {
 #keyboard {
   border: 16px solid #EBE5DC;
   border-radius: 32px;
-  width: 980px;
-  height: 1005;
+  min-width: 980px;
   box-sizing: border-box;
   padding: 8px;
 }
@@ -84,11 +83,11 @@ body {
 }
 
 #keyboard .top-letter button:nth-child(1) {
-  flex: 1 1 72px;
+  flex-basis: 72px;
 }
 
 #keyboard .top-letter button:nth-child(14) {
-  flex: 2 2 72px;
+  flex-basis: 72px;
 }
 
 #keyboard .middle-letter button:nth-child(1) {
@@ -110,7 +109,7 @@ body {
 }
 
 #keyboard .last-letter button:nth-child(4) {
-  flex: 7 7 408px;
+  flex-basis: 456px;
 }
 
 #keyboard .fun-key button:active,
