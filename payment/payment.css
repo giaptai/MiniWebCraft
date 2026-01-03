@@ -1,18 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-body: #17212c;
+    --bg-card: #1d2837;
+    --bg-type: #233342;
+    --text-color: white;
+    --border-color: #1f2d3b;
+    --btn-bg-color: #0c79f8;
+}
+
 * {
     padding: 0px;
     margin: 0px;
 }
 
 body {
-    background: #17212c;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-body);
+    color: var(--text-color);
+    font-family: "Roboto", sans-serif;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0px 64px 0px 64px;
     box-sizing: border-box;
+}
+
+body.light {
+    --bg-body: #f5f7fa;
+    --bg-card: #ffffff;
+    --bg-type: #e3e9f2;
+    --text-color: #1a1a1a;
+    --border-color: #d0d7de;
 }
 
 #payment {
@@ -25,17 +45,15 @@ body {
 }
 
 #payment .order {
-    background: #1d2837;
-    flex-basis: max(300px, 33vw);
-    /* width: max(300px, 37vw); */
+    background: var(--bg-card);
+    flex-basis: max(270px, 30vw);
     padding: 24px;
-    /* border: 1px solid #627283; */
     border-radius: 8px;
     box-shadow:
-        inset 4px 0px 0px #1f2d3b,
-        inset 0px 4px 0px #1f2d3b,
-        inset -4px 0px 0px #1f2d3b,
-        inset 0px -4px 0px #1f2d3b;
+        inset 4px 0px 0px var(--border-color),
+        inset 0px 4px 0px var(--border-color),
+        inset -4px 0px 0px var(--border-color),
+        inset 0px -4px 0px var(--border-color);
     display: flex;
     flex-direction: column;
     row-gap: 32px;
@@ -47,8 +65,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 12px;
-    border-bottom: 1px solid #233547;
+    border-bottom: 1px solid var(--border-color);
     box-sizing: border-box;
+    font-size: medium;
 }
 
 #payment .order div input {
@@ -56,8 +75,10 @@ body {
     border: none;
     background-color: transparent;
     padding: 8px;
-    color: white;
+    color: var(--text-color);
     width: 50%;
+    font-size: medium;
+    text-align: end;
 }
 
 #payment .order button {
@@ -65,13 +86,11 @@ body {
     font-size: large;
     padding: 8px;
     height: 55px;
-    color: white;
     font-weight: bolder;
-    background-color: #0c79f8;
+    background-color: var(--btn-bg-color);
 }
 
 #payment .methods {
-    /* padding: 24px; */
     flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -79,22 +98,19 @@ body {
     gap: 20px;
 }
 
-/* #payment .methods > * {
-    aspect-ratio: 4 / 3;
-} */
 
 #payment .methods div.type {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    background: #233342;
+    background: var(--bg-card);
     text-align: center;
     box-shadow:
-        2px 0px 0px #1f2d3b,
-        -2px 0px 0px #1f2d3b,
-        0px 2px 0px #1f2d3b,
-        0px -2px 0px #1f2d3b,
+        2px 0px 0px var(--border-color),
+        -2px 0px 0px var(--border-color),
+        0px 2px 0px var(--border-color),
+        0px -2px 0px var(--border-color),
         0px 0px 0px 0px transparent;
     border-radius: 12px;
     cursor: pointer;
@@ -106,21 +122,19 @@ body {
     max-width: 100%;
     max-height: 70px;
     object-fit: contain;
-    /* margin-bottom: 20px; */
 }
 
 #payment .methods div.type span {
-    color: rgba(70, 85, 103, 1);
     font-weight: 600;
 }
 
 #payment .methods div.type.active {
     box-shadow:
-        2px 0px 0px #0c79f8,
-        -2px 0px 0px #0c79f8,
-        0px 2px 0px #0c79f8,
-        0px -2px 0px #0c79f8,
-        0px 0px 12px 2px #0c79f8;
+        2px 0px 0px var(--btn-bg-color),
+        -2px 0px 0px var(--btn-bg-color),
+        0px 2px 0px var(--btn-bg-color),
+        0px -2px 0px var(--btn-bg-color),
+        0px 0px 12px 2px var(--btn-bg-color);
 }
 
 
@@ -129,6 +143,31 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 12px;
+    color: white;
+}
+
+.toggle {
+    position: absolute;
+    right: 64px;
+    top: 28px;
+    width: 60px;
+    background: var(--bg-type);
+    border-radius: 12px;
+    padding: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.toggle .dot {
+    width: 16px;
+    height: 16px;
+    background-color: var(--bg-body);
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.toggle.active .dot {
+    transform: translateX(36px);
 }
 
 @media (max-width: 640px) {

@@ -12,3 +12,17 @@ document.querySelectorAll('.type').forEach((p) => {
         document.getElementById("payment-method").value = p.textContent.trim();
     })
 })
+
+function toggleTheme(target) {
+    if (target.classList.contains('active')) {
+        target.classList.remove('active');
+        document.body.classList.remove('light');
+    }
+    else {
+        target.classList.add('active');
+        document.body.classList.toggle('light');
+    }
+}
+
+const toggle = document.getElementsByClassName('toggle')[0];
+toggle.addEventListener("click", () => toggleTheme(toggle));
