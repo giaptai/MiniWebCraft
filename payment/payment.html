@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="device=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="payment.css" />
+    <title>Payments</title>
+</head>
+
+<body>
+    <div id="payment">
+        <form class="order" method="post">
+            <h3>Summary</h3>
+            <div>
+                <label for="order-id">Order ID:</label>
+                <input id="order-id" type="text" value="" readonly />
+            </div>
+            <div>
+                <label for="coupon-code">Coupon code:</label>
+                <input id="coupon-code" type="text" value="" />
+            </div>
+            <div>
+                <label for="payment-method">Payment method:</label>
+                <input id="payment-method" type="text" value="" readonly />
+            </div>
+            <button type="button" class="pay">Pay</button>
+        </form>
+        <div class="methods">
+            <div class="type">
+                <img src="https://homepage.momocdn.net/img/logo-momo.png" />
+                <span>Momo</span>
+            </div>
+            <div class="type">
+                <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-VNPAY-QR-1.png" />
+                <span>VNPAY</span>
+            </div>
+            <div class="type">
+                <img src="https://cdn-icons-png.freepik.com/512/5968/5968500.png" />
+                <span>Apple Pay</span>
+            </div>
+             <div class="type">
+                <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-ZaloPay-Square.png" />
+                <span>Zalopay</span>
+            </div>
+        </div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+
+
+
+</html>
