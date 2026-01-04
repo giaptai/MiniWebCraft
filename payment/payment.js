@@ -1,6 +1,9 @@
 window.onload = () => {
     let time = Date.now();
     document.getElementById("order-id").value = time;
+
+    const total = document.getElementById("total");
+    total.value = new Intl.NumberFormat('vi-VN').format(total.value);
 }
 
 document.querySelectorAll('.type').forEach((p) => {
