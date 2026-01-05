@@ -4,7 +4,25 @@ window.onload = () => {
 
     const total = document.getElementById("total");
     total.value = new Intl.NumberFormat('vi-VN').format(total.value);
+
+    document.querySelector('.finished').classList.add('hidden');
 }
+
+document.querySelectorAll('.stepper .step').forEach(p => {
+    p.addEventListener('click', () => {
+        document.querySelectorAll('.stepper .step').forEach((el) => {
+            el.classList.remove('active');
+        })
+        if (p.textContent === 'Finish') {
+            document.querySelector('.finished').classList.remove('hidden');
+            document.getElementById('payment').classList.add('hidden');
+        } else {
+            document.querySelector('.finished').classList.add('hidden');
+            document.getElementById('payment').classList.remove('hidden');
+        }
+        p.classList.toggle('active');
+    })
+})
 
 document.querySelectorAll('.type').forEach((p) => {
     p.addEventListener("click", () => {
